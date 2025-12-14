@@ -9,17 +9,18 @@ A Buffer stores the entire data in memory at once.
 Download whole movie → then play
 
 Example: Buffer (fs.readFile)
-``
+
+```js
  const fs = require("fs");
 
 fs.readFile("bigfile.txt", (err, data) => {
   console.log("File loaded");
 });
 
-``
+```
 
 
-** 📌 Problem: **
+**📌Problem:**
 
 Loads full file into RAM
 
@@ -34,7 +35,7 @@ A Stream processes data piece by piece (chunks).
 Watch movie while downloading
 
 Example: Stream (fs.createReadStream)
-``
+```js
 const fs = require("fs");
 
 const stream = fs.createReadStream("bigfile.txt");
@@ -42,10 +43,10 @@ const stream = fs.createReadStream("bigfile.txt");
 stream.on("data", chunk => {
   console.log("Received chunk");
 });
-``
+```
 
 
-** 📌 Advantage: **
+**📌Advantage:**
 
 Low memory usage
 Faster
@@ -58,9 +59,12 @@ Types of Streams
 3️⃣ Duplex – read & write
 4️⃣ Transform – modify data
 
-** Stream Pipe (🔥 Important) **
+**Stream Pipe (🔥 Important)**
+
+```js
 fs.createReadStream("input.txt")
   .pipe(fs.createWriteStream("output.txt"));
+```
 
 
 ✔ Automatically handles:
