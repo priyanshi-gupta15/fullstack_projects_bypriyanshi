@@ -71,10 +71,10 @@ fs.createReadStream("input.txt")
 Flow control
 Backpressure
 
-Streams vs  Buffers (Comparison)
-Feature	       Buffer    	     Stream  
-Memory	       High	           Low  
-Data	         Whole at once	 In chunks  
-Speed	         Slower   	     Faster  
-Best for	     Small files	   Large files  
-Scalability    ❌ Poor	       ✅ Excellent  
+Streams vs  Buffers (Comparison)  
+>Feature	       Buffer    	     Stream  
+>Memory	       High	           Low  
+>Data	         Whole at once	 In chunks  
+>Speed	         Slower   	     Faster  
+>Best for	     Small files	   Large files  
+>Scalability    ❌ Poor	       ✅ Excellent  
